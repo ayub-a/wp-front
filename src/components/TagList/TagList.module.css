@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag_item {
+  background: #e6e6e6;
+  font-size: 16px;
+  text-decoration: none;
+  color: #767676;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.tag_item:hover {
+  background: #d7d7d7;
+  color: #767676;
+}

@@ -1,0 +1,96 @@
+.mob_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 6px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mob_top_short_info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: grey;
+  font-size: 15px;
+  max-width: 300px;
+}
+
+.github_link {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.mob_top > h1 {
+  font-size: 13px;
+}
+
+.mob_top > h1 > span {
+  color: #838383;
+}
+
+.mob_header_top {
+  display: flex;
+  align-items: center;
+}
+
+.mob_header_top > div {
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+.mob_header_top > a > button {
+  border: none;
+  padding: 9px 14px 5px 12px;
+  border-radius: 0 10px 10px 0;
+  background: black;
+}
+
+.mob_header_top > a > button > svg {
+  width: 25px;
+  height: 25px;
+}
+
+.mob_header_top > a > button > svg > path {
+  stroke: white;
+}
+
+.mob_bottom {
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: 6px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.mob_header_bottom {
+  margin: 6px 10px;
+  margin-bottom: 0;
+  border-top: 1px solid #d9d9d9;
+}
+
+@media screen and (max-width: 760px) {
+  .header_under_block {
+    height: 28px;
+  }
+
+  .header_wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    gap: 3px;
+  }
+
+  .navigation {
+    display: none;
+  }
+}

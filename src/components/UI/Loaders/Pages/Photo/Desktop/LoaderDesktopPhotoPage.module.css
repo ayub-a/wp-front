@@ -1,0 +1,264 @@
+.modal_top {
+  height: 100%;
+  display: flex;
+}
+
+.img_wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 155px);
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.image > img {
+  min-height: min(100%, 50px);
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: scale-down;
+}
+
+.about_photo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 450px;
+  height: calc(100vh - 100px);
+  padding-top: 5px;
+  padding-left: 20px;
+  border-left: 1px solid #c3c3c3;
+  overflow: scroll;
+}
+
+.photo_descr {
+  width: 100%;
+  height: 100px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user_name_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user_img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.user_name {
+  width: 100px;
+  height: 20px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.user_username {
+  width: 100px;
+  height: 12px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.close_btn {
+  background: none;
+  border: none;
+  position: fixed;
+  top: 50px;
+  right: 70px;
+}
+
+.close_btn > svg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.close_btn > svg > path {
+  stroke: rgb(193, 193, 193);
+  strokewidth: 1.3px;
+}
+
+.photo_actions {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  padding: 10px 10px 0 0;
+}
+
+.photo_action_item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.photo_action_item:hover {
+  background: rgb(238, 238, 238);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.action_text {
+  width: 100px;
+  height: 20px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.photo_action_item > svg {
+  width: 22px;
+  height: 22px;
+}
+
+.photo_stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #c3c3c3;
+}
+
+.photo_info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #c3c3c3;
+}
+
+.stat_item_wrap {
+  width: 100%;
+}
+
+.stat_item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8d8d8d;
+}
+
+.stat_item > h4 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.stat_item > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.stat_count {
+  width: 100px;
+  height: 20px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info_item_icon {
+  display: flex;
+  align-self: flex-start;
+  padding-top: 1px;
+}
+
+.info_item_icon > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.info_item_text {
+  width: 100%;
+  height: 20px;
+  animation: skeleton-loading 0.6s forwards infinite alternate;
+}
+
+.collection_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #c3c3c3;
+}
+
+.collection_tag_item {
+  text-decoration: none;
+  background: #e6e6e6;
+  border-radius: 5px;
+  color: #767676;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.collection_tag_item:hover {
+  background: #d7d7d7;
+  color: #767676;
+}
+
+.related_collections_wrap {
+  margin: 50px 20px 30px 20px;
+}
+
+.related_collections_title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 97%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 85%);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .modal_wrap {
+    top: 36px;
+    left: 0;
+    padding: 15px 10px;
+    margin: 0;
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+  }
+
+  .modal_top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .img_wrap {
+    height: calc(100% - 50px);
+  }
+}

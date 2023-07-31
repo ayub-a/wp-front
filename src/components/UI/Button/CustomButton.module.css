@@ -1,0 +1,15 @@
+.btn {
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.text {
+  font-weight: 400;
+  color: #9b9b9b;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
