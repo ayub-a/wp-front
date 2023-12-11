@@ -58,15 +58,8 @@ const DesktopPhotoItem: FC<IDesktopPhotoItemProps> = ({
                   </CopyToClipboard>
                 </div>
 
-                <div
-                  className={cl.photo_action_item}
-                  data-img-size={`${currImg.width} x ${currImg.height}`}
-                >
-                  <CustomButton
-                    icon="DOWNLOAD"
-                    onClick={downloadPhotoHandler}
-                    className={cl.link_item}
-                  >
+                <div className={cl.photo_action_item} data-img-size={`${currImg.width} x ${currImg.height}`}>
+                  <CustomButton icon="DOWNLOAD" onClick={downloadPhotoHandler} className={cl.link_item}>
                     <h4>Download {currImg.size}</h4>
                   </CustomButton>
                 </div>
@@ -90,18 +83,14 @@ const DesktopPhotoItem: FC<IDesktopPhotoItemProps> = ({
                   <div className={cl.stat_item}>
                     <h4>Views</h4> <SvgIcon icon="VIEWS" />
                   </div>
-                  <div className={cl.stat_count}>
-                    {currImg?.views ? countFormatter(currImg?.views) : 0}
-                  </div>
+                  <div className={cl.stat_count}>{currImg?.views ? countFormatter(currImg?.views) : 0}</div>
                 </div>
 
                 <div className={cl.stat_item_wrap}>
                   <div className={cl.stat_item}>
                     <h4>Downloads</h4> <SvgIcon icon="DOWNLOADS" />
                   </div>
-                  <div className={cl.stat_count}>
-                    {currImg?.downloads ? countFormatter(currImg?.downloads) : 0}
-                  </div>
+                  <div className={cl.stat_count}>{currImg?.downloads ? countFormatter(currImg?.downloads) : 0}</div>
                 </div>
               </div>
 
@@ -118,9 +107,7 @@ const DesktopPhotoItem: FC<IDesktopPhotoItemProps> = ({
                     currImg?.location.name || ''
                   }`}
                   icon="LOCATION"
-                  hideIf={
-                    currImg?.location.city || currImg?.location.country || currImg?.location.name
-                  }
+                  hideIf={currImg?.location.city || currImg?.location.country || currImg?.location.name}
                   className={cl.info_item}
                   iconsize={[21, 21]}
                 />

@@ -24,11 +24,7 @@ export const PhotoList: FC<ImageListProps> = ({ photos, isLoading, loadMore }) =
         ) : (
           <>
             {photos.map((photo) => (
-              <Link
-                key={photo.id}
-                to={`/photos/${photo.id}`}
-                state={{ previousLocation: location }}
-              >
+              <Link key={photo.id} to={`/photos/${photo.id}`} state={{ previousLocation: location }}>
                 <OptimizedImage photo={photo} />
               </Link>
             ))}

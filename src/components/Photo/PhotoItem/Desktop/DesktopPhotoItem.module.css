@@ -166,11 +166,11 @@
   font-size: 18px;
 }
 
-.photo_action_item[data-img-size] {
+/* .photo_action_item[data-img-size] {
   cursor: not-allowed;
-}
+} */
 
-.photo_action_item[data-img-size]::before {
+/* .photo_action_item[data-img-size]::before {
   content: attr(data-img-size);
   position: absolute;
   background: #ffffff;
@@ -216,7 +216,7 @@
 .photo_action_item[data-img-size]:hover:after {
   opacity: 1;
   transition: 0.3s;
-}
+} */
 
 /* ABOUT PHOTO */
 .photo_info {

@@ -15,15 +15,11 @@ interface ICustomButtonProps extends SvgIconsProps {
 
 const CustomButton = (props: PropsWithChildren<ICustomButtonProps>) => {
   const { children, text, icon, hideIf, className, onClick, reverse, cursor, isLoading } = props
-
+  console.log(onClick)
   return (
     <>
       {hideIf ? null : (
-        <button
-          className={[cl.btn, className].join(' ')}
-          onClick={onClick}
-          style={{ cursor: cursor }}
-        >
+        <button className={[cl.btn, className].join(' ')} onClick={onClick} style={{ cursor: cursor }}>
           {reverse ? (
             <>
               {icon && <SvgIcon icon={icon} />}

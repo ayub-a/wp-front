@@ -48,35 +48,35 @@ export const PhotoItem: FC<IPhotoItemProps> = ({ closeBtn }) => {
   }, [])
 
   // Work only on "localhost"
-  //eslint-disable-next-line
-  // const downloadPhotoHandler = async () => {
-  //   if (currImg) {
-  //     try {
-  //       abortController.current = new AbortController()
-  //       setTimeout(cancelRequest, 7000)
+  // eslint-disable-next-line
+  const downloadPhotoHandler = async () => {
+    if (currImg) {
+      try {
+        abortController.current = new AbortController()
+        setTimeout(cancelRequest, 7000)
 
-  //       const imageName = `${currImg?.user.username}-${currImg?.id}`
-  //       const response = await fetch(`${API_URL}/photos/${currImg.id}/download/${imageName}`, {
-  //         signal: abortController.current?.signal,
-  //       })
+        const imageName = `${currImg?.user.username}-${currImg?.id}`
+        const response = await fetch(`${API_URL}/photos/${currImg.id}/download/${imageName}`, {
+          signal: abortController.current?.signal,
+        })
 
-  //       if (response.status === 200) {
-  //         const blob = await response.blob()
-  //         const downloadUrl = window.URL.createObjectURL(blob)
-  //         const link = document.createElement('a')
+        if (response.status === 200) {
+          const blob = await response.blob()
+          const downloadUrl = window.URL.createObjectURL(blob)
+          const link = document.createElement('a')
 
-  //         link.href = downloadUrl
-  //         link.download = imageName
-  //         document.body.appendChild(link)
-  //         link.click()
-  //         link.remove()
-  //         URL.revokeObjectURL(downloadUrl)
-  //       }
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  //   }
-  // }
+          link.href = downloadUrl
+          link.download = imageName
+          document.body.appendChild(link)
+          link.click()
+          link.remove()
+          URL.revokeObjectURL(downloadUrl)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
 
   const cancelRequest = () => abortController.current && abortController.current.abort()
 
@@ -91,8 +91,8 @@ export const PhotoItem: FC<IPhotoItemProps> = ({ closeBtn }) => {
           currImg={currImg}
           closeBtn={closeBtn}
           closeModalHandler={closeModalHandler}
-          downloadPhotoHandler={() => {}}
-          // downloadPhotoHandler={downloadPhotoHandler}
+          // downloadPhotoHandler={() => {}}
+          downloadPhotoHandler={downloadPhotoHandler}
         />
       ) : (
         <MobilePhotoItem
